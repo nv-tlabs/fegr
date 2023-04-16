@@ -401,13 +401,6 @@ figure {
         <hr>
         <p>Reconstruction and intrinsic decomposition of scenes from captured imagery would enable many applications such as relighting and virtual object insertion. Recent NeRF based methods achieve impressive fidelity of 3D reconstruction, but bake the lighting and shadows into the radiance field, while mesh-based methods that facilitate intrinsic decomposition through differentiable rendering have not yet scaled to the complexity and scale of outdoor scenes. We present a novel inverse rendering framework for large urban scenes capable of jointly reconstructing the scene geometry, spatially-varying materials, and HDR lighting from a set of posed RGB images with optional depth. Specifically, we use a neural field to account for the primary rays, and use an explicit mesh (reconstructed from the underlying neural field) for modeling secondary rays that produce higher-order lighting effects such as cast shadows. By faithfully disentangling complex geometry and materials from lighting effects, our method enables photorealistic relighting with specular and shadow effects on several outdoor datasets. Moreover, it supports physics-based scene manipulations such as virtual object insertion with ray-traced shadow casting. 
         </p>
-        <!-- <figure style="width: 100%;">
-            <a>
-                <img width="100%" src="assets/teaser.jpg" style="margin-bottom: -5px;">
-            </a>
-            <p class="caption" style="margin-bottom: 1px;">
-            </p>
-        </figure> -->
     </section>
 
     <section id="intro">
@@ -424,6 +417,7 @@ figure {
                 </iframe>
             </center>
         </figure>
+        <p style="font-weight: 400; ">Combined with other NVIDIA technology, FEGR is one component of the <a href="https://www.youtube.com/watch?v=vgot-CK1xRk">Neural Reconstruction Engine</a> announced in <a href="https://youtu.be/PWcNlRI00jo?t=2473">GTC Sept 2022 Keynote</a>. </p>
     </section>
 
     <section id="method">
@@ -446,9 +440,6 @@ figure {
         <figure style="width: 100%;">
             <img width="100%" src="assets/model.jpg">
             <p class="caption" style="margin-bottom: 3px;">
-            <!-- <strong> Overview of FEGR.</strong> 
-            Given a set of posed camera images, FEGR estimates the geometry, spatially varying materials, and HDR lighting of the underlying scene. We model the intrinsic properties of the scene using a neural intrinsic field and use an HDR Sky Dome to represent the lighting. Our Hybrid Deferred Renderer models the primary rays with volumetric rendering of the neural field, while the secondary rays are ray-traced using an explicit mesh reconstructed from the SD field. By modeling the HDR properties of the scene FEGR can support several scene manipulations including novel-view synthesis, scene relighting, and AR.
-            </p> -->
         </figure>
         <p>
         </p>
@@ -533,7 +524,7 @@ year = {2023}
         <h2>Acknowledgment</h2>
         <hr>
         <p>The authors appreciate the support from <a href="https://jme.pub">Janick Martinez Esturo</a>, <a href="https://www.linkedin.com/in/evgeny-toropov-9bb14210b/">Evgeny Toropov</a>, <a href="https://www.linkedin.com/in/chen-chen-00499624/">Chen Chen</a> on the data processing pipeline, and the help from <a href="https://www.linkedin.com/in/linasong/">Lina Halper</a>, <a href="https://zhengyiluo.github.io">Zhengyi Luo</a>, <a href="https://www.linkedin.com/in/kelly-guo-18316982/?originalSubdomain=ca">Kelly Guo</a>, <a href="https://www.linkedin.com/in/gavstate/?originalSubdomain=ca">Gavriel State</a> on creating the edited scenes. 
-        We would also like to thank the authors of <a href="https://4dqv.mpi-inf.mpg.de/NeRF-OSR/">NeRF-OSR</a> for communication on experiment details. 
+        We would also like to thank the authors of <a href="https://4dqv.mpi-inf.mpg.de/NeRF-OSR/">NeRF-OSR</a> for discussion on dataset and experiment details. 
         </p>
     </section>
 
